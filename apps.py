@@ -111,6 +111,18 @@ def text_processing_file():
     response_data = jsonify(json_response)
     return response_data
 
+@swag_from("docs/hello_world.yml", methods=['GET'])
+@app.route('/bye', methods=['GET'])
+def hello_world():
+    json_response = {
+        'status_code': 200,
+        'description': "Menyapa Hello World",
+        'data': "Hello World",
+    }
+
+    response_data = jsonify(json_response)
+    return response_data
+
 if __name__ == '__main__':
    app.run()
 
