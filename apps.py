@@ -116,8 +116,8 @@ def text_processing_file():
 def hello_world():
     json_response = {
         'status_code': 200,
-        'description': "Saying good bye",
-        'data': "Good Bye!",
+        'description': "Menyapa Hello World",
+        'data': "Hello World",
     }
 
     response_data = jsonify(json_response)
